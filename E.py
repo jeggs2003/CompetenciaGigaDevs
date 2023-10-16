@@ -1,13 +1,27 @@
+Optimiza este código de Python
 linea1 = input()
-numero, posciongn = map(int, linea1.split(maxsplit=2))
+
+datos = []
+datos = (linea1.split(' ', maxsplit= 2));
+
+numero = int(datos[0])
+posciongn = int(datos[1])
+polen = []
+polen2 = []
 
 linea2 = input()
-polen = list(map(int, linea2.split(maxsplit=numero)))
+polen2 = linea2.split(' ', maxsplit= numero);
 
-for _ in range(posciongn):
-    polen.sort()
-    max_valor = polen[-1]
-    contador = sum(map(int, str(max_valor)))
-    polen[-1] -= contador
+for i in range (0, numero):
+    polen.append(int(polen2[i]))
+contador = 0;
+
+for i in range (0,posciongn):
+    contador = 0;
+    polen.sort();
+    valorstring = str(polen[numero-1])
+    for i in range (0, len(valorstring)):
+        contador = contador + int(valorstring[i]);
+    polen[numero-1] = polen[numero-1] - contador;
 
 print(contador)

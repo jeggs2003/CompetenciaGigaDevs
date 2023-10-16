@@ -1,4 +1,3 @@
-Optimiza este código de Python
 linea1 = input()
 
 datos = []
